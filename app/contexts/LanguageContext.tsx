@@ -375,7 +375,7 @@ const translations: Record<Language, any> = {
       coverage: "Coverage:",
       coverageValue: "La Unión, Valle del Cauca",
       madeWith: "Made with",
-      forLives: "to transform lives",
+      forLives: "by Marcelo Puentes",
       rights: "All rights reserved.",
     },
   },
