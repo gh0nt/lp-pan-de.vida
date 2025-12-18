@@ -4,8 +4,11 @@ import { Button } from "@/app/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/app/assets/hero-community.jpg";
 import logo from "@/app/assets/logo.png";
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -30,13 +33,12 @@ const Hero = () => {
             className="w-32 h-32 mx-auto mb-8 drop-shadow-2xl"
           />
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Sembrando Esperanza,
+            {t("hero.title1")}
             <br />
-            <span className="text-hope">Cosechando Vida</span>
+            <span className="text-hope">{t("hero.title2")}</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Acompañamos a familias vulnerables en La Unión, Valle del Cauca,
-            brindando alimentación, educación y amor desde la fe en Jesús.
+            {t("hero.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
@@ -44,7 +46,7 @@ const Hero = () => {
               onClick={() => scrollToSection("donar")}
               className="bg-hope text-hope-foreground hover:bg-hope/90 text-lg px-8 py-6 shadow-2xl"
             >
-              Donar Ahora
+              {t("hero.donateNow")}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -53,7 +55,7 @@ const Hero = () => {
               onClick={() => scrollToSection("ayudar")}
               className="bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/20 text-lg px-8 py-6"
             >
-              Cómo Ayudar
+              {t("hero.howToHelp")}
             </Button>
           </div>
         </div>

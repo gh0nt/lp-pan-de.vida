@@ -1,27 +1,32 @@
+"use client";
+
 import { TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/app/components/ui/card";
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 const Impact = () => {
+  const { t } = useLanguage();
+
   const stats = [
     {
-      number: "150+",
-      label: "Familias Beneficiadas",
-      description: "Acompañamiento mensual",
+      number: "36+",
+      label: t("impact.stat1"),
+      description: t("impact.stat1Desc"),
     },
     {
-      number: "300+",
-      label: "Niños y Adolescentes",
-      description: "En programas educativos",
+      number: "60+",
+      label: t("impact.stat2"),
+      description: t("impact.stat2Desc"),
     },
     {
-      number: "12.000+",
-      label: "Comidas Servidas",
-      description: "Alimentación diaria",
+      number: "12%",
+      label: t("impact.stat3"),
+      description: t("impact.stat3Desc"),
     },
     {
       number: "5 años",
-      label: "De Compromiso",
-      description: "Transformando la comunidad",
+      label: t("impact.stat4"),
+      description: t("impact.stat4Desc"),
     },
   ];
 
@@ -35,11 +40,10 @@ const Impact = () => {
             </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Nuestro Impacto
+            {t("impact.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Cada donación, cada hora de voluntariado, cada oración... todo se
-            transforma en vidas restauradas y esperanzas renovadas.
+            {t("impact.description")}
           </p>
         </div>
 
@@ -68,27 +72,19 @@ const Impact = () => {
           <Card className="bg-card/80 backdrop-blur">
             <CardContent className="pt-8">
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Historias de Transformación
+                {t("impact.stories")}
               </h3>
               <div className="space-y-4 text-foreground">
                 <div className="border-l-4 border-accent pl-4">
-                  <p className="italic mb-2">
-                    "Antes mis hijos iban a la escuela sin desayunar. Ahora,
-                    gracias a la fundación, no solo reciben alimentación, sino
-                    también apoyo con sus tareas y valores cristianos."
-                  </p>
+                  <p className="italic mb-2">{t("impact.testimony1")}</p>
                   <p className="text-sm text-muted-foreground">
-                    — María, madre de 3 niños
+                    {t("impact.testimony1Author")}
                   </p>
                 </div>
                 <div className="border-l-4 border-hope pl-4">
-                  <p className="italic mb-2">
-                    "El programa 'Escalando Peldaños' me dio la oportunidad de
-                    continuar mis estudios. Hoy estoy en la universidad gracias
-                    al apoyo de la fundación."
-                  </p>
+                  <p className="italic mb-2">{t("impact.testimony2")}</p>
                   <p className="text-sm text-muted-foreground">
-                    — Julián, beneficiario del programa
+                    {t("impact.testimony2Author")}
                   </p>
                 </div>
               </div>
@@ -98,34 +94,32 @@ const Impact = () => {
           <Card className="bg-gradient-to-br from-primary/5 to-accent/5">
             <CardContent className="pt-8">
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Nuestras Actividades Diarias
+                {t("impact.activities")}
               </h3>
               <ul className="space-y-3 text-foreground">
                 <li className="flex items-start">
                   <span className="text-accent mr-2 text-xl">✓</span>
-                  <span>
-                    Desayunos y almuerzos nutritivos para niños y familias
-                  </span>
+                  <span>{t("impact.activity1")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2 text-xl">✓</span>
-                  <span>Apoyo escolar y refuerzo académico</span>
+                  <span>{t("impact.activity2")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2 text-xl">✓</span>
-                  <span>Talleres de valores y formación cristiana</span>
+                  <span>{t("impact.activity3")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2 text-xl">✓</span>
-                  <span>Acompañamiento psicosocial a familias</span>
+                  <span>{t("impact.activity4")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2 text-xl">✓</span>
-                  <span>Capacitación en oficios y emprendimiento</span>
+                  <span>{t("impact.activity5")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2 text-xl">✓</span>
-                  <span>Entrega de kits escolares y útiles</span>
+                  <span>{t("impact.activity6")}</span>
                 </li>
               </ul>
             </CardContent>

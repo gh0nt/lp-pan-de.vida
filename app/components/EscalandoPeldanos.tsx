@@ -1,8 +1,13 @@
+"use client";
+
 import { GraduationCap, Target, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/app/components/ui/card";
 import escalandoImage from "@/app/assets/escalando-peldanos.jpg";
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 const EscalandoPeldanos = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -13,19 +18,14 @@ const EscalandoPeldanos = () => {
                 <GraduationCap className="w-8 h-8 text-hope" />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-primary">
-                Escalando Peldaños
+                {t("escalando.title")}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              Nuestro programa insignia que acompaña a niños y jóvenes en su
-              camino hacia un futuro lleno de oportunidades, escalando paso a
-              paso hacia sus sueños y metas.
+              {t("escalando.description")}
             </p>
             <p className="text-foreground leading-relaxed mb-6">
-              Cada "peldaño" representa una etapa de crecimiento: desde el apoyo
-              nutricional y académico básico, hasta becas educativas y
-              orientación vocacional para jóvenes que aspiran a la educación
-              superior.
+              {t("escalando.description2")}
             </p>
           </div>
           <div className="relative">
@@ -35,8 +35,8 @@ const EscalandoPeldanos = () => {
               className="rounded-2xl shadow-2xl w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-hope text-hope-foreground p-6 rounded-xl shadow-xl max-w-xs">
-              <p className="font-bold text-lg mb-1">Transformando Futuros</p>
-              <p className="text-sm">Un peldaño a la vez</p>
+              <p className="font-bold text-lg mb-1">{t("escalando.badge1")}</p>
+              <p className="text-sm">{t("escalando.badge2")}</p>
             </div>
           </div>
         </div>
@@ -48,24 +48,24 @@ const EscalandoPeldanos = () => {
                 <Target className="w-6 h-6 text-hope" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">
-                Objetivos del Programa
+                {t("escalando.objectives")}
               </h3>
               <ul className="space-y-2 text-foreground">
                 <li className="flex items-start">
                   <span className="text-hope mr-2">•</span>
-                  <span>Garantizar alimentación diaria nutritiva</span>
+                  <span>{t("escalando.obj1")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-hope mr-2">•</span>
-                  <span>Mejorar rendimiento académico</span>
+                  <span>{t("escalando.obj2")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-hope mr-2">•</span>
-                  <span>Desarrollar habilidades para la vida</span>
+                  <span>{t("escalando.obj3")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-hope mr-2">•</span>
-                  <span>Fomentar valores cristianos</span>
+                  <span>{t("escalando.obj4")}</span>
                 </li>
               </ul>
             </CardContent>
@@ -77,24 +77,24 @@ const EscalandoPeldanos = () => {
                 <Lightbulb className="w-6 h-6 text-accent" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">
-                Componentes Clave
+                {t("escalando.components")}
               </h3>
               <ul className="space-y-2 text-foreground">
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>Programa nutricional completo</span>
+                  <span>{t("escalando.comp1")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>Refuerzo escolar personalizado</span>
+                  <span>{t("escalando.comp2")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>Talleres de arte y recreación</span>
+                  <span>{t("escalando.comp3")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>Apoyo psicosocial familiar</span>
+                  <span>{t("escalando.comp4")}</span>
                 </li>
               </ul>
             </CardContent>
@@ -106,24 +106,24 @@ const EscalandoPeldanos = () => {
                 <GraduationCap className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">
-                Resultados Esperados
+                {t("escalando.results")}
               </h3>
               <ul className="space-y-2 text-foreground">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Niños bien alimentados y sanos</span>
+                  <span>{t("escalando.res1")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Mejora en calificaciones escolares</span>
+                  <span>{t("escalando.res2")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Jóvenes con proyecto de vida claro</span>
+                  <span>{t("escalando.res3")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Familias fortalecidas y esperanzadas</span>
+                  <span>{t("escalando.res4")}</span>
                 </li>
               </ul>
             </CardContent>

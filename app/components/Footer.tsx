@@ -1,7 +1,12 @@
+"use client";
+
 import { Mail, Phone, MapPin, Facebook, Instagram, Heart } from "lucide-react";
 import logo from "@/app/assets/logo.png";
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -14,9 +19,7 @@ const Footer = () => {
               className="w-24 h-24 mb-4"
             />
             <p className="text-primary-foreground/80 mb-4 leading-relaxed">
-              Fundación cristiana sin ánimo de lucro comprometida con el
-              desarrollo integral de familias vulnerables en La Unión, Valle del
-              Cauca.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               <a
@@ -37,32 +40,32 @@ const Footer = () => {
           {/* Enlaces Rápidos */}
           <div>
             <h4 className="font-bold text-lg mb-4 text-hope">
-              Enlaces Rápidos
+              {t("footer.quickLinks")}
             </h4>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
                 <a href="#" className="hover:text-hope transition-colors">
-                  Inicio
+                  {t("footer.home")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-hope transition-colors">
-                  Quiénes Somos
+                  {t("footer.about")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-hope transition-colors">
-                  Programas
+                  {t("footer.programs")}
                 </a>
               </li>
               <li>
                 <a href="#ayudar" className="hover:text-hope transition-colors">
-                  Cómo Ayudar
+                  {t("footer.howToHelp")}
                 </a>
               </li>
               <li>
                 <a href="#donar" className="hover:text-hope transition-colors">
-                  Donar
+                  {t("footer.donate")}
                 </a>
               </li>
             </ul>
@@ -70,7 +73,9 @@ const Footer = () => {
 
           {/* Contacto */}
           <div>
-            <h4 className="font-bold text-lg mb-4 text-hope">Contacto</h4>
+            <h4 className="font-bold text-lg mb-4 text-hope">
+              {t("footer.contact")}
+            </h4>
             <ul className="space-y-3 text-primary-foreground/80 text-sm">
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-hope" />
@@ -82,7 +87,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="w-4 h-4 mr-2 flex-shrink-0 text-hope" />
-                <span>+57 [Teléfono]</span>
+                <span>+57 3147773630</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 flex-shrink-0 text-hope" />
@@ -97,49 +102,55 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 gap-4 text-sm text-primary-foreground/70 mb-6">
             <div>
               <p>
-                <strong className="text-primary-foreground">NIT:</strong> [NIT
-                de la fundación]
+                <strong className="text-primary-foreground">
+                  {t("footer.nitLabel")}
+                </strong>{" "}
+                [NIT de la fundación]
               </p>
               <p>
                 <strong className="text-primary-foreground">
-                  Personería Jurídica:
+                  {t("footer.legalPersonality")}
                 </strong>{" "}
                 [Número de resolución]
               </p>
               <p>
-                <strong className="text-primary-foreground">Carácter:</strong>{" "}
-                Sin ánimo de lucro - ESAL
+                <strong className="text-primary-foreground">
+                  {t("footer.character")}
+                </strong>{" "}
+                {t("footer.nonprofit")}
               </p>
             </div>
             <div>
               <p>
                 <strong className="text-primary-foreground">
-                  Representante Legal:
+                  {t("footer.legalRep")}
                 </strong>{" "}
                 [Nombre]
               </p>
               <p>
                 <strong className="text-primary-foreground">
-                  Población Objetivo:
+                  {t("footer.targetPop")}
                 </strong>{" "}
-                Niños, adolescentes y familias vulnerables
+                {t("footer.targetPopValue")}
               </p>
               <p>
-                <strong className="text-primary-foreground">Cobertura:</strong>{" "}
-                La Unión, Valle del Cauca
+                <strong className="text-primary-foreground">
+                  {t("footer.coverage")}
+                </strong>{" "}
+                {t("footer.coverageValue")}
               </p>
             </div>
           </div>
 
           <div className="text-center text-primary-foreground/60 text-sm">
             <p className="flex items-center justify-center gap-2 mb-2">
-              <span>Hecho con</span>
+              <span>{t("footer.madeWith")}</span>
               <Heart className="w-4 h-4 text-passion fill-current" />
-              <span>para transformar vidas</span>
+              <span>{t("footer.forLives")}</span>
             </p>
             <p>
-              © {new Date().getFullYear()} Fundación El Verdadero Pan de Vida.
-              Todos los derechos reservados.
+              © {new Date().getFullYear()} Fundación El Verdadero Pan de Vida.{" "}
+              {t("footer.rights")}
             </p>
           </div>
         </div>

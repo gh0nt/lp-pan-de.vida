@@ -1,18 +1,21 @@
+"use client";
+
 import { Heart, Users, BookOpen } from "lucide-react";
 import { Card, CardContent } from "@/app/components/ui/card";
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 const Mission = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Nuestra Misión
+            {t("mission.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Somos una fundación cristiana sin ánimo de lucro, comprometida con
-            el desarrollo integral de niños, adolescentes y familias en
-            situación de vulnerabilidad en La Unión, Valle del Cauca.
+            {t("mission.description")}
           </p>
         </div>
 
@@ -23,11 +26,10 @@ const Mission = () => {
                 <Heart className="w-8 h-8 text-accent" />
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Fe y Amor
+                {t("mission.faithLove")}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Compartimos el amor de Jesús a través de acciones concretas que
-                transforman vidas y restauran esperanzas.
+                {t("mission.faithLoveDesc")}
               </p>
             </CardContent>
           </Card>
@@ -38,11 +40,10 @@ const Mission = () => {
                 <Users className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Comunidad
+                {t("mission.community")}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Construimos una red de apoyo donde cada familia encuentra
-                dignidad, respeto y oportunidades de crecimiento.
+                {t("mission.communityDesc")}
               </p>
             </CardContent>
           </Card>
@@ -53,11 +54,10 @@ const Mission = () => {
                 <BookOpen className="w-8 h-8 text-passion" />
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Educación
+                {t("mission.education")}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Fortalecemos capacidades a través de formación, acompañamiento y
-                herramientas para un futuro mejor.
+                {t("mission.educationDesc")}
               </p>
             </CardContent>
           </Card>
@@ -67,44 +67,32 @@ const Mission = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Nuestra Visión
+                {t("mission.vision")}
               </h3>
               <p className="text-foreground leading-relaxed">
-                Ser reconocidos en Colombia como un modelo de transformación
-                social cristiana, donde cada persona descubre su valor y
-                potencial en Cristo, construyendo comunidades prósperas y llenas
-                de esperanza.
+                {t("mission.visionDesc")}
               </p>
             </div>
             <div>
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Nuestros Valores
+                {t("mission.values")}
               </h3>
               <ul className="space-y-2 text-foreground">
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>
-                    <strong>Amor:</strong> Base de todo nuestro servicio
-                  </span>
+                  <span>{t("mission.value1")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>
-                    <strong>Dignidad:</strong> Respeto a cada persona
-                  </span>
+                  <span>{t("mission.value2")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>
-                    <strong>Transparencia:</strong> Gestión honesta de recursos
-                  </span>
+                  <span>{t("mission.value3")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  <span>
-                    <strong>Compromiso:</strong> Presencia constante en la
-                    comunidad
-                  </span>
+                  <span>{t("mission.value4")}</span>
                 </li>
               </ul>
             </div>
