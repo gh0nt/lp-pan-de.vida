@@ -23,13 +23,13 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/p/1DSyWkYRV1/"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-hope/20 rounded-full flex items-center justify-center transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/fundacionelverdaderopandevida?igsh=Z2UwMDRhM3JpZHEx"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-hope/20 rounded-full flex items-center justify-center transition-colors"
               >
                 <Instagram className="w-5 h-5" />
@@ -105,14 +105,9 @@ const Footer = () => {
                 <strong className="text-primary-foreground">
                   {t("footer.nitLabel")}
                 </strong>{" "}
-                [NIT de la fundación]
+                901879752-1
               </p>
-              <p>
-                <strong className="text-primary-foreground">
-                  {t("footer.legalPersonality")}
-                </strong>{" "}
-                [Número de resolución]
-              </p>
+
               <p>
                 <strong className="text-primary-foreground">
                   {t("footer.character")}
@@ -125,7 +120,7 @@ const Footer = () => {
                 <strong className="text-primary-foreground">
                   {t("footer.legalRep")}
                 </strong>{" "}
-                [Nombre]
+                Aída Hernández Martínez
               </p>
               <p>
                 <strong className="text-primary-foreground">
